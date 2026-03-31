@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,62 @@
 </head>
 
 <body class="min-h-screen flex flex-col bg-gray-100">
-    <header class="bg-gray-600 text-white">
-        <div class="flex justify-between container mx-auto p-4">
-            <a href="/students" class="font-bold text-xl">Sistem Sekolah</a>
-            <a href="/students/create" class="bg-white text-gray-500 px-4 py-2 rounded-lg">+ Tambah Siswa</a>
-        </div>
-    </header>
-
+<header class="bg-gray-600 text-white">
+    <div class="flex items-center justify-between container mx-auto p-4">
+        <a href="/students" class="font-bold text-xl">Sistem Sekolah</a>
+        <a href="/students/create" class="bg-white text-black px-4 py-2 rounded-lg">+ Tambah Siswa</a>
+    </div>
+</header>
+    <!-- Main Content -->
     <main class="grow container mx-auto">
-        <div class="mt-8">
-            <!--card header start-->
+        <div class="mt-8 space-y-4">
+            <!--Card Header-->
             <div class="bg-white shadow rounded-lg p-4">
-                <h1 class="text-xl font-bold">Daftar Siswa</h1>
-                <p>Menampilkan daftar siswa yang terdaftar</p>
+                <h1 class="text-2xl font-bold ">Daftar Siswa</h1>
+                <p>Menampilkan siswa yang terdaftar</p>
             </div>
-            <!--card header end-->
-            
-            <!--card content start-->
-            <div class="bg-white shadow rounded-lg p-4">
-
+            <!--Card Header End-->
+            <!--Card Content-->
+            <div class="bg-white shadow rounded-lg p-4 mt-4">
+                <table class="w-full">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="py-2 px-4 text-left">No</th>
+                            <th class="py-2 px-4 text-left">Nama</th>
+                            <th class="py-2 px-4 text-left">NIS</th>
+                            <th class="py-2 px-4 text-left">Kelas</th>
+                            <th class="py-2 px-4 text-left">No Telepon</th>
+                            <th class="py-2 px-4 ">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 text-left">1</td>
+                            <td class="py-2 px-4 text-left">CUMIK</td>
+                            <td class="py-2 px-4 text-left">1234</td>
+                            <td class="py-2 px-4 text-left">11 TKJ 3</td>
+                            <td class="py-2 px-4 text-left">0812345678</td>
+                            <td class="py-2 px-4">
+                                <div class="flex items-center justify-center gap-4">
+                                    <a href="" class="text-green-500">Detail</a>
+                                    <a href="" class="text-yellow-500">Edit</a>
+                                    <a href="" class="text-red-500">Hapus</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>      
-    </main>
-        
-    <footer class="bg-gray-600 text-white p-4">
-        <div class="text-center">
-            &copy <?= date('y')?> - Sistem Sekolah SMK Kristen Immanuel
+            <!--Card Content End-->
         </div>
-    </footer>
+    </main>
+    <!-- End of Main Content -->
+<!-- Footer -->
+ <footer class="bg-gray-800 text-white">
+    <div class="text-center p-4">
+        &copy <?= date('Y')?> - Sistem Sekolah SMK Kristen Immanuel
+    </div>
+ </footer>
+ <!-- End of Footer -->
 </body>
 </html>
