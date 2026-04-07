@@ -47,6 +47,10 @@
                         <input class="w-full border rounded-lg py-2 px-4" type="text" name="phone_number" id="phone_number" 
                             placeholder="Masukkan No Telepon">
                     </div>
+                    <div class="flex justify-end gap-4 col-span-2">
+                        <a href="/students" class="py-2 px-4 bg-gray-200 rounded-lg">Kembali</a>
+                        <button type="submit" class="py-2 px-4 bg-gray-600 rounded-lg text-white">Simpan</button>
+                    </div>
                 </form>
             </div>
             <!--Card Content End-->
