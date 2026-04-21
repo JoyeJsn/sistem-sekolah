@@ -7,24 +7,24 @@
             <!--Card Header End-->
             <!--Card Content start-->
             <div class="bg-white shadow rounded-lg p-4">
-                <form action="" class="p-4 grid grid-cols-2 gap-4">
+                <form action="/students" method="POST" class="p-4 grid grid-cols-2 gap-4">
                     <div class="space-y-2">
                         <label for="name" class="block font-bold">Nama</label>
                         <input class="w-full border rounded-lg py-2 px-4" type="text" name="name" id="name" 
                             placeholder="Masukkan nama">
                     </div>
                     <div class="space-y-2">
-                        <label for="name" class="block font-bold">NIS</label>
+                        <label for="nis" class="block font-bold">NIS</label>
                         <input class="w-full border rounded-lg py-2 px-4" type="text" name="nis" id="nis" 
                             placeholder="Masukkan NIS">
                     </div>
                     <div class="space-y-2">
-                        <label for="name" class="block font-bold">Kelas</label>
-                        <input class="w-full border rounded-lg py-2 px-4" type="text" name="kelas" id="kelas" 
+                        <label for="class" class="block font-bold">Kelas</label>
+                        <input class="w-full border rounded-lg py-2 px-4" type="text" name="class" id="class" 
                             placeholder="Masukkan Kelas">
                     </div>
                     <div class="space-y-2">
-                        <label for="name" class="block font-bold">No Telepon</label>
+                        <label for="phone_number" class="block font-bold">No Telepon</label>
                         <input class="w-full border rounded-lg py-2 px-4" type="text" name="phone_number" id="phone_number" 
                             placeholder="Masukkan No Telepon">
                     </div>
