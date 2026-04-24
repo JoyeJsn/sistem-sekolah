@@ -20,30 +20,33 @@
                     </thead>
                     <tbody>
                         <?php foreach($students as $index => $student):?>
-                        <tr>
-                            <td class="py-2 px-4 text-left">
-                                <?= $index + 1?>
-                            </td>
-                            <td class="py-2 px-4 text-left">
-                                <?= $student['name']?>
-                            </td>
-                            <td class="py-2 px-4 text-left">
-                                <?= $student['nis']?>
-                            </td>
-                            <td class="py-2 px-4 text-left">
-                                <?= $student['class']?>
-                            </td>
-                            <td class="py-2 px-4 text-left">
-                                <?= $student['phone_number']?>
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex items-center justify-center gap-4">
-                                    <a href="/students/<?= $student['id']?>" class="text-green-500">Detail</a>
-                                    <a href="/students/<?= $student['id']?>/edit" class="text-yellow-500">Edit</a>
-                                    <a href="" class="text-red-500">Hapus</a>
-                                </div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $index + 1?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['name']?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['nis']?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['class']?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['phone_number']?>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <div class="flex items-center justify-center gap-4">
+                                        <a href="/students/<?= $student['id']?>" class="text-green-500">Detail</a>
+                                        <a href="/students/<?= $student['id']?>/edit" class="text-yellow-500">Edit</a>
+                                        <form onsubmit="return confirm('Apakah Anda yakin ingin menghapus data siswa ini?')" action="/students/<?= $student['id']?>" method="POST">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button type="submit" class="text-red-500">Hapus</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
                         <?php endforeach?>
 
                     </tbody>
